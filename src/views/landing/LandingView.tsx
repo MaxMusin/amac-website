@@ -1,9 +1,11 @@
-import JoinSection from './components/JoinSection';
+import AboutSection from './components/AboutSection';
+import ContactSection from './components/ContactSection';
 
 const LandingView = () => {
   return (
     <div>
-      <JoinSection />
+      <AboutSection />
+      <ContactSection />
     </div>
   );
 };

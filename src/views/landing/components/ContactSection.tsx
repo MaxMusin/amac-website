@@ -1,7 +1,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Check, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -30,90 +30,41 @@ import { useToast } from '@/hooks/use-toast';
 import { sendContactEmail } from '@/lib/actions';
 import { contactFormSchema } from '@/lib/schemas';
 
-const JoinSection = () => {
+const ContactSection = () => {
   const t = useTranslations('join');
 
   return (
     <section
       id="join"
-      className="section-padding relative overflow-hidden bg-overlay-container"
+      className="section-padding relative overflow-hidden bg-foreground"
     >
-      {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/raidillon.jpg"
-          alt="Raidillon corner"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-muted">
               {t('title')}
             </h2>
-            <div className="h-1 w-24 bg-white mb-8"></div>
-
-            <p className="text-lg text-white/80 mb-8">{t('description')}</p>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-bold mb-4 text-white">
-                {t('whyJoinUs')}
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <Check className="text-white mr-2 h-5 w-5 mt-1" />
-                  <span className="text-white/80">
-                    {t('benefits.coaching')}
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="text-white mr-2 h-5 w-5 mt-1" />
-                  <span className="text-white/80">
-                    {t('benefits.equipment')}
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="text-white mr-2 h-5 w-5 mt-1" />
-                  <span className="text-white/80">{t('benefits.events')}</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="text-white mr-2 h-5 w-5 mt-1" />
-                  <span className="text-white/80">
-                    {t('benefits.community')}
-                  </span>
-                </li>
-              </ul>
-            </div>
+            <p className="text-lg text-secondary mb-8">{t('description')}</p>
 
             <div>
-              <h3 className="text-xl font-bold mb-4 text-white">
+              <h3 className="text-xl font-bold mb-4 text-muted">
                 {t('contact.title')}
               </h3>
               <div className="space-y-3">
-              <div className="flex items-center">
-                  <MapPin className="text-white mr-3 h-5 w-5" />
-                  <span className="text-white/80">
-                    {t('contact.organization')}
-                  </span>
-                </div>
                 <div className="flex items-center">
-                  <Mail className="text-white mr-3 h-5 w-5" />
+                  <Mail className="text-secondary mr-3 h-5 w-5" />
                   <a
                     href={`mailto:${t('contact.email')}`}
-                    className="text-white/80 hover:text-white transition-colors"
+                    className="text-secondary hover:text-white transition-colors"
                   >
                     {t('contact.email')}
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <Phone className="text-white mr-3 h-5 w-5" />
+                  <Phone className="text-secondary mr-3 h-5 w-5" />
                   <a
                     href={`tel:${t('contact.phone')}`}
-                    className="text-white/80 hover:text-white transition-colors"
+                    className="text-secondary hover:text-white transition-colors"
                   >
                     {t('contact.phone')}
                   </a>
@@ -150,7 +101,6 @@ function ContactForm() {
       email: '',
       phone: '',
       interest: '',
-      experience: '',
       message: '',
     },
   });
@@ -173,7 +123,6 @@ function ContactForm() {
           email: '',
           phone: '',
           interest: '',
-          experience: '',
           message: '',
         });
       } else {
@@ -286,54 +235,11 @@ function ContactForm() {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="trackday">
-                      {t('form.interest.trackday')}
+                    <SelectItem value="private">
+                      {t('form.interest.private')}
                     </SelectItem>
                     <SelectItem value="simracing">
                       {t('form.interest.simracing')}
-                    </SelectItem>
-                    <SelectItem value="both">
-                      {t('form.interest.both')}
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="experience"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-sm font-medium text-muted-foreground">
-                  {t('form.experience.label')}
-                </FormLabel>
-                <Select
-                  onValueChange={field.onChange}
-                  value={field.value}
-                  defaultValue={field.value}
-                >
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue
-                        placeholder={t('form.experience.placeholder')}
-                      />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="none">
-                      {t('form.experience.none')}
-                    </SelectItem>
-                    <SelectItem value="beginner">
-                      {t('form.experience.beginner')}
-                    </SelectItem>
-                    <SelectItem value="intermediate">
-                      {t('form.experience.intermediate')}
-                    </SelectItem>
-                    <SelectItem value="experienced">
-                      {t('form.experience.experienced')}
                     </SelectItem>
                   </SelectContent>
                 </Select>
@@ -369,14 +275,10 @@ function ContactForm() {
           >
             {isSubmitting ? 'Sending...' : t('form.submit')}
           </Button>
-
-          <p className="text-xs text-muted-foreground text-center mt-4">
-            {t('form.disclaimer')}
-          </p>
         </form>
       </Form>
     </>
   );
 }
 
-export default JoinSection;
+export default ContactSection;

@@ -1,28 +1,10 @@
-import { cn } from '@/utils';
-
-const Header = ({
-  title,
-  subtitle,
-  centered,
-}: {
-  title: string;
-  subtitle: string;
-  centered?: boolean;
-}) => {
+const Header = ({ title, badge }: { title: string; badge: string }) => {
   return (
-    <div className={cn('mb-16', { 'text-center': centered })}>
-      {subtitle !== '' && (
-        <h3 className="text-racing-red uppercase tracking-wider font-semibold mb-2 text-xl md:text-2xl">
-          {subtitle}
-        </h3>
-      )}
-      <h2
-        className={cn('text-4xl md:text-5xl font-bold mb-4 md:mb-6 uppercase', {
-          'racing-stripe': !centered,
-        })}
-      >
-        {title}
-      </h2>
+    <div className="">
+      <p className="inline-block rounded-[32px] border border-secondary-foreground px-4 py-2 uppercase text-secondary-foreground font-medium">
+        {badge}
+      </p>
+      <h2 className="text-4xl md:text-5xl font-bold mb-4 md:mb-6 mt-4">{title}</h2>
     </div>
   );
 };

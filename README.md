@@ -6,7 +6,7 @@ This project is a Next.js 15 starter with:
 
 - [Tailwind CSS](https://tailwindcss.com/) for styling
 - [next-intl](https://next-intl-docs.vercel.app/) for internationalization
-- Support for three languages: English, French, and Dutch
+- Support for two languages: English and French
 
 ## Internationalization Features
 
