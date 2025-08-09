@@ -14,8 +14,11 @@ const MarkdownText = ({
   variant = 'default',
   size = 'base'
 }: MarkdownTextProps) => {
-  // The content already contains proper newlines, no need to process escaped ones
-  const processedContent = children;
+  // Convert single newlines to double spaces + newline (markdown line break syntax)
+  // Keep double newlines as paragraph breaks
+  const processedContent = children
+    .replace(/\n\n/g, '\n\n') // Keep paragraph breaks
+    .replace(/(?<!\n)\n(?!\n)/g, '  \n'); // Single newlines become line breaks (two spaces + newline)
   
   const variantStyles = {
     default: 'text-foreground',
@@ -48,6 +51,7 @@ const MarkdownText = ({
               {children}
             </p>
           ),
+          br: () => <br className="leading-relaxed" />,
           strong: ({ children }) => (
             <strong className={cn(
               'font-semibold',
