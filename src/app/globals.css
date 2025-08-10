@@ -28,7 +28,6 @@
     --accent: 24 100% 50%; /* #FF7300 */
     --accent-foreground: 0 0% 98%;
 
-    /* === Muted Colors (Gris foncé) === */
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 82%;
 
@@ -203,20 +202,6 @@
     @apply bg-racing-dark text-white;
   }
 
-  .checkered-border {
-    background-image:
-      linear-gradient(45deg, #ffffff 25%, transparent 25%),
-      linear-gradient(-45deg, #ffffff 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, #ffffff 75%),
-      linear-gradient(-45deg, transparent 75%, #ffffff 75%);
-    background-size: 10px 10px;
-    background-position:
-      0 0,
-      0 5px,
-      5px -5px,
-      -5px 0px;
-  }
-
   /* Custom utility classes for the color palette */
   .text-racing-red {
     color: var(--racing-red);
@@ -262,45 +247,6 @@
     @apply text-xl md:text-2xl font-semibold mb-4 md:mb-6;
   }
 
-  .racing-stripe {
-    position: relative;
-  }
-
-  .racing-stripe::after {
-    content: "";
-    position: absolute;
-    left: 0px;
-    bottom: -5px;
-    height: 3px;
-    width: 60px;
-    background-color: var(--racing-red);
-  }
-
-  .clip-diagonal {
-    @apply pb-20 md:pb-[132px] lg:pb-[148px];
-    clip-path: polygon(0 0, 100% 0, 100% 98%, 0 100%);
-
-    @media (min-width: 768px) {
-      clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
-    }
-
-    @media (min-width: 1024px) {
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    }
-  }
-
-  .clip-diagonal-reverse {
-    @apply pt-20 md:pt-[132px] lg:pt-[148px];
-    clip-path: polygon(0 2%, 100% 0, 100% 100%, 0 100%);
-
-    @media (min-width: 768px) {
-      clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
-    }
-
-    @media (min-width: 1024px) {
-      clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-    }
-  }
 
   .bg-overlay-container::before {
     content: '';

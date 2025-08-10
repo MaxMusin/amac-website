@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="race-section bg-overlay-container relative overflow-hidden section-padding"
+      className="bg-overlay-container relative overflow-hidden section-padding"
     >
       {/* Background image */}
       <div className="absolute inset-0 z-0">
@@ -23,9 +23,9 @@ const About = () => {
       </div>
       <div className="container mx-auto z-10 relative">
         <div className="space-y-6">
-          <Header title={t('title')} badge={t('badge')} />
-          <MarkdownText 
-            variant="muted" 
+          <Header title={t('title')} badge={t('badge')} dark/>
+          <MarkdownText
+            variant="muted"
             size="lg"
           >
             {t('paragraph')}

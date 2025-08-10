@@ -20,63 +20,17 @@
     "pitlane": "Pitlane",
     "simracingTeam": "Équipe Simracing"
   },
+  "consulting": {
+    "badge": "Consulting Achat-Vente",
+    "title": "Un regard d’architecte pour booster vos ventes et guider vos achats",
+    "paragraph": "Que vous soyez vendeur ou acquéreur, AMAC vous accompagne dans toutes les étapes de votre projet immobilier en vous apportant un regard expert, à la fois architectural et stratégique.\n\n### Vous vendez ?\n\nNous vous aidons à valoriser votre bien en esquissant un projet architectural non contractuel qui permet d’imaginer son plein potentiel. Cette projection permet de présenter un véritable projet d’investissement aux acquéreurs, en stimulant leur intérêt et en facilitant la vente dans les meilleures conditions.\n\nNous simulons également les travaux les plus simples pour passer un label PEB au-dessus de l’actuel, un argument bien apprécié pendant les visites immobilières !\n\n### Vous achetez ?\n\nAvant toute décision, nous analysons avec vous les travaux nécessaires à la transformation du bien selon vos envies. Grâce à une budgétisation claire et des conseils personnalisés, vous avancez dans votre projet d’acquisition en toute confiance et avec une vision concrète de ce que le bien peut devenir.\n\nNous simulons également les travaux les plus simples pour passer un label PEB au-dessus de l’actuel ainsi que le coût engendré.\n\n### Des questions sur l’immobilier ou l’investissement ?\n\nAMAC met à votre disposition un réseau d’experts immobiliers pour répondre à toutes vos interrogations. Que vous envisagiez d’acheter, de vendre ou d’investir, nous vous accompagnons avec des conseils clairs, personnalisés et adaptés à votre situation.\n\nGrâce à notre expertise et à celle de nos partenaires, vous bénéficiez d’un accompagnement complet pour aborder votre projet immobilier en toute sérénité."
+  },
   "about": {
     "title": "Concevoir des lieux durables et sensibles, où chaque projet devient une rencontre entre esthétique, fonctionnalité et respect du vivant.",
     "badge": "À propos de nous",
     "paragraph": "Chez AMAC, l'architecture naît d'un équilibre subtil entre esthétique, fonctionnalité et respect du vivant. Chaque projet que nous concevons est une réponse unique à un lieu, un usage, une histoire – façonné avec soin, imagination et responsabilité.\n\nFondé dans la région de Mons avec la volonté de créer des espaces sensibles, durables et sur mesure, notre bureau d'architecture accompagne ses clients dans toutes les étapes de la conception et de la réalisation : de l'esquisse initiale aux études techniques, jusqu'au suivi de chantier. AMAC s'engage à chaque phase du processus pour donner vie à des lieux inspirants, cohérents et pérennes.\n\nNotre approche se distingue par une attention particulière portée au patrimoine, à la rénovation et à l'usage de matériaux biosourcés, dans une logique de transition écologique et de respect du contexte bâti.\n\nEngagés dans la performance énergétique des bâtiments, nous sommes également agréés Responsable PEB ainsi que Certificateur PEB, et vous accompagnons dans l'atteinte de vos objectifs en matière de confort thermique, d'efficacité énergétique et de conformité réglementaire.\n\nNotre expertise s'étend également au consulting immobilier.\nQue vous soyez vendeur ou acquéreur, AMAC vous accompagne dans l'analyse et la valorisation des biens :\n\n- Pour les vendeurs, nous imaginons des esquisses non contractuelles afin de révéler le potentiel du bien et présenter un véritable projet d'investissement aux acheteurs.\n- Pour les acquéreurs, nous évaluons les possibilités de transformation, budgétisons les travaux et vous conseillons pour sécuriser votre achat.\n\nNous défendons une architecture porteuse de sens, en dialogue permanent avec son environnement – naturel, urbain et humain. Notre démarche repose sur l'écoute, l'innovation et la valorisation des savoir-faire locaux. Chaque projet est conçu avec une attention fine portée aux matériaux, aux ambiances, à l'ancrage paysager et à l'éthique écologique.\n\nParticuliers, entreprises, collectivités, ou porteurs de projets atypiques, AMAC vous propose un accompagnement sur mesure, avec une approche ouverte, sensible et résolument contemporaine. Ensemble, imaginons les espaces de demain – des lieux de vie, de travail ou de rencontre, pensés pour durer et vibrer."
   },
-  "teams": {
-    "title": "Nos équipes",
-    "subtitle": "",
-    "description": "Auriga Racing est actif dans de multiples disciplines : Des évènements réels Fun Cup jusqu'aux compétitions de Simracing.",
-    "track": {
-      "title": "Fun Cup",
-      "description": "Notre équipe Fun Cup est active à travers l'Europe, où elle met en avant son talent et sa précision sur certain des circuits les plus exigeants.",
-      "features": {
-        "drivers": "Pilotes expérimentés avec des années d'expérience",
-        "equipment": "Voitures et équipements de pointe",
-        "training": "Sessions de trackday régulières"
-      },
-      "cta": "Rejoignez-nous en trackday"
-    },
-    "simracing": {
-      "title": "Simracing",
-      "description": "De l'apprentissage jusqu'au Top Split, notre division Simracing fait preuve d'un engagement sérieux basé sur les principes et valeurs qui sont le fondement d'Auriga.",
-      "features": {
-        "leagues": "Participez à la compétition dans les ligues internationales de sport sur iRacing",
-        "equipment": "Equipement de simulation professionnel",
-        "coaching": "Coaching et équipe stratégique dédiés"
-      },
-      "cta": "Rejoignez notre équipe Simracing"
-    }
-  },
-  "gallery": {
-    "title": "Galerie",
-    "subtitle": "",
-    "description": "Moments capturés de nos aventures de course, à la fois sur piste et dans le monde virtuel",
-    "viewFullGallery": "Voir la galerie complète",
-    "images": {
-      "image1": "La Fun Cup se chauffe",
-      "image2": "Prêt à partir",
-      "image3": "Dernières vérifications avant le début du trackday",
-      "image4": "Le coach est prêt à démarrer",
-      "image5": "Le pilote du jour est prêt à prendre la piste",
-      "image6": "Notre #333 en action",
-      "image7": "Impossible de manquer où nous sommes",
-      "image8": "Le box",
-      "image9": "Espace convivial",
-      "image10": "Restauration pour nos pilotes du jour",
-      "image11": "Changement de pilote",
-      "image12": "Notre #333 pendant la pause",
-      "image13": "Photo d'équipe à la fin de la journée"
-    },
-    "aria": {
-      "prevSlide": "Diapositive précédente",
-      "nextSlide": "Diapositive suivante",
-      "goToSlide": "Aller à la diapositive {index}"
-    }
-  },
-  "join": {
+  "contact": {
     "title": "Discutons de vos idées, donnons-leur forme",
     "description": "Parce qu’un projet réussi commence par une vision partagée, nous vous accompagnons pas à pas, de vos premières idées jusqu’à leur réalisation concrète.",
     "whyJoinUs": "Pourquoi nous rejoindre sur circuit ou/et en ligne ?",
@@ -130,167 +84,6 @@
       "submit": "Envoyer",
       "success": "Votre message a été envoyé avec succès ! Nous vous répondrons bientôt.",
       "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
-    }
-  },
-  "events": {
-    "title": "Trackdays à venir",
-    "subtitle": "Sur circuit",
-    "description": "Rejoignez-nous lors de ces prochains trackdays et événements de Simracing où Auriga Racing sera présent",
-    "fullCalendar": "Calendrier complet",
-    "track": "Circuit de {track}",
-    "pastEvents": "Événements passés",
-    "event": {
-      "title": "Trackday à {track}",
-      "description": "Rejoignez-nous pour un trackday à {track} le {date}",
-      "detailedDescription": "Rejoignez-nous pour un passionnant trackday à {track} en {country}. Vivez le frisson de la course sur ce circuit incroyable avec Auriga Racing.",
-      "whatToExpect": "Au cours de cet événement, vous aurez l'occasion tant de decouvrir les pratiques du sport automobile que d'améliorer vos compétences de conduite, de recevoir des conseils de pilotes expérimentés et de profiter d'une journée complète de temps de piste dans un environnement sûr et contrôlé.",
-      "requirements": "Veuillez arriver au moins 1 heure avant l'heure de début pour l'inscription et le briefing.",
-      "soldOut": "Complet",
-      "booked": "Réservé",
-      "priceVATIncl": "{price}€ TTC",
-      "priceVATExcl": "{price}€ HT",
-      "bracelet": "Prix du bracelet pilote à la journée",
-      "session": "Prix de la session de {sessionTime}",
-      "canceled": "Annulé",
-      "canceledNotice": "Cet événement a été annulé",
-      "eventCanceled": "Événement annulé"
-    },
-    "backToEvents": "Retour aux événements",
-    "date": "Date",
-    "time": "Horaire",
-    "location": "Lieu",
-    "eventType": "Type d'événement",
-    "participants": "Participants",
-    "maxParticipants": "Maximum {count} participants",
-    "trackLength": "Longueur du circuit",
-    "kilometers": "{length} km",
-    "registerForEvent": "S'inscrire à cet événement",
-    "joinWaitingList": "Rejoindre la liste d'attente",
-    "eventDetails": "Détails de l'événement",
-    "relatedEvents": "Autres événements",
-    "countries": {
-      "belgium": "Belgique",
-      "france": "France",
-      "netherlands": "Pays-Bas"
-    },
-    "bookingSection": {
-      "title": "Réservez votre place",
-      "description": "Assurez votre participation à notre événement à {track} le {date}. Places limitées !",
-      "whyBook": "Pourquoi réserver avec nous ?",
-      "benefits": {
-        "coaching": "Coaching professionnel par des pilotes expérimentés",
-        "track": "Journée complète sur circuit premium",
-        "equipment": "Accès à l'équipement de sécurité et support technique",
-        "community": "Rejoignez une communauté de passionnés de course"
-      },
-      "eventDetails": "Informations sur l'événement",
-      "sessionsLeft": "{sessions} sessions restantes",
-      "form": {
-        "title": "Formulaire d'inscription",
-        "firstName": "Prénom*",
-        "lastName": "Nom*",
-        "email": "Adresse e-mail*",
-        "phone": "Numéro de téléphone*",
-        "carDetails": "Détails du véhicule (Marque, Modèle, Année)*",
-        "experience": {
-          "label": "Votre expérience en course*",
-          "placeholder": "Sélectionnez votre niveau d'expérience",
-          "none": "Aucune (Première fois)",
-          "beginner": "Débutant (0-3 événements)",
-          "intermediate": "Intermédiaire (4-10 événements)",
-          "experienced": "Expérimenté (10+ événements)"
-        },
-        "message": {
-          "label": "Informations supplémentaires",
-          "placeholder": "Exigences spécifiques ou questions..."
-        },
-        "submit": "Réserver maintenant",
-        "submitting": "Traitement en cours...",
-        "soldOut": "Complet",
-        "disclaimer": "En soumettant ce formulaire, vous acceptez nos conditions générales de participation aux trackdays.",
-        "thankYou": "Merci !",
-        "confirmationSent": "Votre demande de réservation a été reçue. Nous vous enverrons un e-mail de confirmation avec plus de détails.",
-        "bookAnother": "Réserver un autre événement",
-        "successTitle": "Réservation réussie",
-        "successMessage": "Votre réservation a été confirmée. Consultez votre e-mail pour les détails.",
-        "errorTitle": "Erreur de réservation",
-        "errorMessage": "Un problème est survenu lors du traitement de votre réservation. Veuillez réessayer."
-      }
-    }
-  },
-  "contact": {
-    "meta": {
-      "title": "Contactez-nous | Auriga Racing",
-      "description": "Prenez contact avec l'équipe Auriga Racing pour toute question concernant nos trackdays, notre équipe de Simracing ou pour devenir partenaire."
-    },
-    "hero": {
-      "title": "Contactez-nous",
-      "subtitle": "Notre équipe est à votre disposition pour répondre à toutes vos questions"
-    },
-    "contactInfo": {
-      "title": "Restons en contact",
-      "description": "Que vous soyez intéressé par nos trackdays, notre équipe de Simracing, ou si vous souhaitez simplement en savoir plus sur Auriga Racing, n'hésitez pas à nous contacter.",
-      "whyContactUs": "Comment pouvons-nous vous aider ?",
-      "reasons": {
-        "events": "Informations sur nos prochains événements et trackdays",
-        "membership": "Rejoindre notre équipe ou devenir membre",
-        "partnership": "Opportunités de partenariat et de sponsoring",
-        "support": "Support technique et questions générales"
-      },
-      "details": {
-        "title": "Coordonnées",
-        "address": "Auriga ASBL, Rue de Spa 1, 4970 Stavelot, Belgique"
-      }
-    },
-    "form": {
-      "title": "Envoyez-nous un message",
-      "firstName": {
-        "label": "Prénom",
-        "placeholder": "Votre prénom"
-      },
-      "lastName": {
-        "label": "Nom",
-        "placeholder": "Votre nom"
-      },
-      "email": {
-        "label": "Email",
-        "placeholder": "votre.email@exemple.com"
-      },
-      "phone": {
-        "label": "Téléphone",
-        "placeholder": "Votre numéro de téléphone"
-      },
-      "interest": {
-        "label": "Je suis intéressé par",
-        "placeholder": "Sélectionnez une option",
-        "trackday": "Trackdays",
-        "simracing": "Simracing",
-        "partnership": "Partenariat",
-        "other": "Autre"
-      },
-      "experience": {
-        "label": "Niveau d'expérience",
-        "placeholder": "Sélectionnez votre niveau",
-        "none": "Débutant",
-        "beginner": "Novice (1-2 ans)",
-        "intermediate": "Intermédiaire (3-5 ans)",
-        "experienced": "Expérimenté (5+ ans)"
-      },
-      "message": {
-        "label": "Message",
-        "placeholder": "Votre message..."
-      },
-      "submit": "Envoyer",
-      "submitting": "Envoi en cours...",
-      "disclaimer": "En soumettant ce formulaire, vous acceptez notre politique de confidentialité et nos conditions d'utilisation.",
-      "success": {
-        "title": "Message envoyé !",
-        "message": "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
-      },
-      "error": {
-        "title": "Erreur",
-        "message": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
-      }
     }
   },
   "footer": {

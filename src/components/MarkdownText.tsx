@@ -4,12 +4,12 @@ import { cn } from '@/utils';
 interface MarkdownTextProps {
   children: string;
   className?: string;
-  variant?: 'default' | 'light' | 'dark' | 'muted';
+  variant?: 'default' | 'muted';
   size?: 'sm' | 'base' | 'lg' | 'xl';
 }
 
 const MarkdownText = ({ 
-  children, 
+  children,   
   className, 
   variant = 'default',
   size = 'base'
@@ -20,11 +20,16 @@ const MarkdownText = ({
     .replace(/\n\n/g, '\n\n') // Keep paragraph breaks
     .replace(/(?<!\n)\n(?!\n)/g, '  \n'); // Single newlines become line breaks (two spaces + newline)
   
+
+  
   const variantStyles = {
-    default: 'text-foreground',
-    light: 'text-white',
-    dark: 'text-black',
-    muted: 'text-white/80'
+    default: 'text-secondary',
+    muted: 'text-muted-foreground'
+  };
+
+  const variantHeadingStyles = {
+    default: 'text-muted',
+    muted: 'text-muted-foreground'
   };
 
   const sizeStyles = {
@@ -40,24 +45,55 @@ const MarkdownText = ({
         'prose max-w-none',
         variantStyles[variant],
         sizeStyles[size],
-        variant === 'light' || variant === 'muted' ? 'prose-invert' : '',
+        variant === 'muted' ? 'prose-invert' : '',
         className
       )}
     >
       <ReactMarkdown
         components={{
           p: ({ children }) => (
-            <p className={cn(variantStyles[variant], sizeStyles[size], 'mb-4')}>
+            <p className={cn(variantStyles[variant], sizeStyles[size], 'mb-6')}>
               {children}
             </p>
           ),
           br: () => <br className="leading-relaxed" />,
+          h1: ({ children }) => (
+            <h1 className={cn(
+              'text-3xl font-bold mb-4 mt-6',
+              variantHeadingStyles[variant]
+            )}>
+              {children}
+            </h1>
+          ),
+          h2: ({ children }) => (
+            <h2 className={cn(
+              'text-2xl font-bold mb-3 mt-5',
+              variantHeadingStyles[variant]
+            )}>
+              {children}
+            </h2>
+          ),
+          h3: ({ children }) => (
+            <h3 className={cn(
+              'text-2xl font-medium mb-4',
+              variantHeadingStyles[variant]
+            )}>
+              {children}
+            </h3>
+          ),
+          h4: ({ children }) => (
+            <h4 className={cn(
+              'text-lg font-semibold mb-2 mt-3',
+              variantHeadingStyles[variant]
+            )}>
+              {children}
+            </h4>
+          ),
           strong: ({ children }) => (
             <strong className={cn(
               'font-semibold',
-              variant === 'light' ? 'text-white' : 
               variant === 'muted' ? 'text-white' :
-              variant === 'dark' ? 'text-black' : 'text-foreground'
+              'text-foreground'
             )}>
               {children}
             </strong>
@@ -65,9 +101,7 @@ const MarkdownText = ({
           em: ({ children }) => (
             <em className={cn(
               'italic',
-              variant === 'light' ? 'text-white/90' : 
-              variant === 'muted' ? 'text-white/90' :
-              variant === 'dark' ? 'text-black/80' : 'text-foreground/80'
+              variant === 'muted' ? 'text-white/90' : 'text-foreground/80'
             )}>
               {children}
             </em>

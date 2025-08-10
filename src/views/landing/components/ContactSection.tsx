@@ -1,9 +1,8 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -31,7 +30,7 @@ import { sendContactEmail } from '@/lib/actions';
 import { contactFormSchema } from '@/lib/schemas';
 
 const ContactSection = () => {
-  const t = useTranslations('join');
+  const t = useTranslations('contact');
 
   return (
     <section
@@ -73,7 +72,7 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <div className="bg-card rounded-lg p-6 shadow-xl">
+          <div className="bg-background rounded-lg p-6 shadow-xl">
             <h3 className="text-2xl font-bold mb-6 text-white">
               {t('form.title')}
             </h3>
@@ -88,7 +87,7 @@ const ContactSection = () => {
 
 // Contact form component with React Hook Form and Resend integration
 function ContactForm() {
-  const t = useTranslations('join');
+  const t = useTranslations('contact');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
