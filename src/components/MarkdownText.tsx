@@ -52,7 +52,7 @@ const MarkdownText = ({
       <ReactMarkdown
         components={{
           p: ({ children }) => (
-            <p className={cn(variantStyles[variant], sizeStyles[size], 'mb-6')}>
+            <p className={cn(variantStyles[variant], sizeStyles[size])}>
               {children}
             </p>
           ),
@@ -67,7 +67,7 @@ const MarkdownText = ({
           ),
           h2: ({ children }) => (
             <h2 className={cn(
-              'text-2xl font-bold mb-3 mt-5',
+              'text-2xl font-medium mb-4 mt-6',
               variantHeadingStyles[variant]
             )}>
               {children}
@@ -75,7 +75,7 @@ const MarkdownText = ({
           ),
           h3: ({ children }) => (
             <h3 className={cn(
-              'text-2xl font-medium mb-4',
+              'text-xl font-medium mb-4',
               variantHeadingStyles[variant]
             )}>
               {children}
@@ -108,7 +108,7 @@ const MarkdownText = ({
           ),
           ul: ({ children }) => (
             <ul className={cn(
-              'list-disc list-inside space-y-1 my-4',
+              'list-disc list-inside space-y-1 mb-4 mt-2',
               variantStyles[variant]
             )}>
               {children}

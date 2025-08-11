@@ -20,10 +20,15 @@
     "pitlane": "Pitlane",
     "simracingTeam": "Équipe Simracing"
   },
+  "peb": {
+    "badge": "Certificat PEB",
+    "title": "Un diagnostic clair pour mieux connaître et valoriser votre bien immobilier",
+    "paragraph": "Le certificat PEB (ou certificat de Performance Énergétique des Bâtiments) est un document officiel qui évalue la performance énergétique d'un bâtiment, comme une maison, un appartement ou un bureau. Il est obligatoire en Belgique (et particulièrement en Wallonie, à Bruxelles et en Flandre) lors de la vente ou de la location d'un bien immobilier construits avant 2010. Attention qu'un bâtiment construit après 2010 aura besoin d'un PEB effectué par un Responsable PEB, ce qui est une démarche différence du Certificat PEB.\n\n## Quelle forme prend-il ?\n\nIl prend en compte :\n\n- L'isolation thermique des murs, toitures, sols\n- Le type de vitrage (simple, double, triple)\n- Le système de chauffage (chaudière, pompe à chaleur, etc.)\n- L'eau chaude sanitaire\n- La ventilation\n- La présence de panneaux solaires ou d'autres installations d'énergie renouvelable\n\n## Que mesure exactement le PEB ?\n\n Il attribue un score énergétique : \n\n- A+ à A : excellent (très faible consommation d’énergie). \n- B à C : bon à moyen. \n- D à G : performance faible à très mauvaise (gros travaux à prévoir pour améliorer l'efficacité).\n\n Il mentionne aussi :\n\n- La consommation annuelle estimée en kWh/m².\n- Des conseils techniques pour améliorer la performance énergétique."
+  },
   "consulting": {
     "badge": "Consulting Achat-Vente",
     "title": "Un regard d’architecte pour booster vos ventes et guider vos achats",
-    "paragraph": "Que vous soyez vendeur ou acquéreur, AMAC vous accompagne dans toutes les étapes de votre projet immobilier en vous apportant un regard expert, à la fois architectural et stratégique.\n\n### Vous vendez ?\n\nNous vous aidons à valoriser votre bien en esquissant un projet architectural non contractuel qui permet d’imaginer son plein potentiel. Cette projection permet de présenter un véritable projet d’investissement aux acquéreurs, en stimulant leur intérêt et en facilitant la vente dans les meilleures conditions.\n\nNous simulons également les travaux les plus simples pour passer un label PEB au-dessus de l’actuel, un argument bien apprécié pendant les visites immobilières !\n\n### Vous achetez ?\n\nAvant toute décision, nous analysons avec vous les travaux nécessaires à la transformation du bien selon vos envies. Grâce à une budgétisation claire et des conseils personnalisés, vous avancez dans votre projet d’acquisition en toute confiance et avec une vision concrète de ce que le bien peut devenir.\n\nNous simulons également les travaux les plus simples pour passer un label PEB au-dessus de l’actuel ainsi que le coût engendré.\n\n### Des questions sur l’immobilier ou l’investissement ?\n\nAMAC met à votre disposition un réseau d’experts immobiliers pour répondre à toutes vos interrogations. Que vous envisagiez d’acheter, de vendre ou d’investir, nous vous accompagnons avec des conseils clairs, personnalisés et adaptés à votre situation.\n\nGrâce à notre expertise et à celle de nos partenaires, vous bénéficiez d’un accompagnement complet pour aborder votre projet immobilier en toute sérénité."
+    "paragraph": "Que vous soyez vendeur ou acquéreur, AMAC vous accompagne dans toutes les étapes de votre projet immobilier en vous apportant un regard expert, à la fois architectural et stratégique.\n\n## Vous vendez ?\n\nNous vous aidons à valoriser votre bien en esquissant un projet architectural non contractuel qui permet d’imaginer son plein potentiel. Cette projection permet de présenter un véritable projet d’investissement aux acquéreurs, en stimulant leur intérêt et en facilitant la vente dans les meilleures conditions.\n\nNous simulons également les travaux les plus simples pour passer un label PEB au-dessus de l’actuel, un argument bien apprécié pendant les visites immobilières !\n\n## Vous achetez ?\n\nAvant toute décision, nous analysons avec vous les travaux nécessaires à la transformation du bien selon vos envies. Grâce à une budgétisation claire et des conseils personnalisés, vous avancez dans votre projet d’acquisition en toute confiance et avec une vision concrète de ce que le bien peut devenir.\n\nNous simulons également les travaux les plus simples pour passer un label PEB au-dessus de l’actuel ainsi que le coût engendré.\n\n## Des questions sur l’immobilier ou l’investissement ?\n\nAMAC met à votre disposition un réseau d’experts immobiliers pour répondre à toutes vos interrogations. Que vous envisagiez d’acheter, de vendre ou d’investir, nous vous accompagnons avec des conseils clairs, personnalisés et adaptés à votre situation.\n\nGrâce à notre expertise et à celle de nos partenaires, vous bénéficiez d’un accompagnement complet pour aborder votre projet immobilier en toute sérénité."
   },
   "about": {
     "title": "Concevoir des lieux durables et sensibles, où chaque projet devient une rencontre entre esthétique, fonctionnalité et respect du vivant.",
@@ -55,9 +60,7 @@
       "interest": {
         "label": "Je suis intéressé par *",
         "placeholder": "Sélectionnez une option",
-        "trackday": "Trackday",
-        "simracing": "Simracing",
-        "both": "Les deux"
+        "private": "Particulier"
       },
       "experience": {
         "label": "Expérience de course",

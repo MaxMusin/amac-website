@@ -237,9 +237,6 @@ function ContactForm() {
                     <SelectItem value="private">
                       {t('form.interest.private')}
                     </SelectItem>
-                    <SelectItem value="simracing">
-                      {t('form.interest.simracing')}
-                    </SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
