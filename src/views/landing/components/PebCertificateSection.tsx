@@ -4,11 +4,11 @@ import Header from '@/components/Header';
 import MarkdownText from '@/components/MarkdownText';
 import { useTranslations } from 'next-intl';
 
-const PebSection = () => {
-  const t = useTranslations('peb');
+const PebCertificateSection = () => {
+  const t = useTranslations('pebCertificate');
   return (
     <section
-      id="peb"
+      id="pebCertificate"
       className="section-padding relative overflow-hidden bg-background"
     >
       <div className="container mx-auto relative z-10">
@@ -19,4 +19,4 @@ const PebSection = () => {
   );
 };
 
-export default PebSection;
+export default PebCertificateSection;

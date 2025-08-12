@@ -1,12 +1,14 @@
 import AboutSection from './components/AboutSection';
-import ContactSection from './components/ContactSection';
 import ConsultingSection from './components/ConsultingSection';
-import PebSection from './components/PebSection';
+import ContactSection from './components/ContactSection';
+import PebCertificateSection from './components/PebCertificateSection';
+import PebManagerSection from './components/PebManagerSection';
 
 const LandingView = () => {
   return (
     <div>
-      <PebSection />
+      <PebManagerSection />
+      <PebCertificateSection />
       <ConsultingSection />
       <AboutSection />
       <ContactSection />

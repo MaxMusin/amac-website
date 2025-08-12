@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { cn } from '@/utils';
 
@@ -17,7 +18,8 @@ const MarkdownText = ({
   // Convert single newlines to double spaces + newline (markdown line break syntax)
   // Keep double newlines as paragraph breaks
   const processedContent = children
-    .replace(/\n\n/g, '\n\n') // Keep paragraph breaks
+    .replace(/\\n\\n/g, '\n\n') // Convert escaped double newlines to real paragraph breaks
+    .replace(/\\n/g, '  \n') // Convert escaped single newlines to markdown line breaks
     .replace(/(?<!\n)\n(?!\n)/g, '  \n'); // Single newlines become line breaks (two spaces + newline)
   
 
@@ -51,11 +53,13 @@ const MarkdownText = ({
     >
       <ReactMarkdown
         components={{
-          p: ({ children }) => (
-            <p className={cn(variantStyles[variant], sizeStyles[size])}>
-              {children}
-            </p>
-          ),
+          p: function ParagraphComponent({ children }) {
+            return (
+              <p className={cn(variantStyles[variant], sizeStyles[size], 'mb-4')}>
+                {children}
+              </p>
+            );
+          },
           br: () => <br className="leading-relaxed" />,
           h1: ({ children }) => (
             <h1 className={cn(
@@ -108,17 +112,40 @@ const MarkdownText = ({
           ),
           ul: ({ children }) => (
             <ul className={cn(
-              'list-disc list-inside space-y-1 mb-4 mt-2',
+              'list-disc ml-6 mb-4 space-y-1',
+              '[&_ul]:list-[circle] [&_ul]:ml-4 [&_ul]:mb-0 [&_ul]:mt-0',
+              '[&_ul_ul]:list-[square] [&_ul_ul]:ml-4 [&_ul_ul]:mb-0 [&_ul_ul]:mt-0',
               variantStyles[variant]
             )}>
               {children}
             </ul>
           ),
-          li: ({ children }) => (
-            <li className={cn('mb-1', variantStyles[variant])}>
+          ol: ({ children }) => (
+            <ol className={cn(
+              'list-decimal ml-6 mb-4 mt-2 space-y-1',
+              '[&_ol]:list-[lower-alpha] [&_ol]:ml-4 [&_ol]:mb-0 [&_ol]:mt-0',
+              '[&_ol_ol]:list-[lower-roman] [&_ol_ol]:ml-4 [&_ol_ol]:mb-0 [&_ol_ol]:mt-0',
+              variantStyles[variant]
+            )}>
               {children}
-            </li>
-          )
+            </ol>
+          ),
+          li: ({ children }) => {
+            // Process children to remove paragraph wrappers
+            const processedChildren = React.Children.map(children, (child) => {
+              // If child is a paragraph element, unwrap it
+              if (React.isValidElement(child) && typeof child.type === 'function' && child.type.name === 'ParagraphComponent') {
+                return (child as React.ReactElement<{ children: React.ReactNode }>).props.children;
+              }
+              return child;
+            });
+            
+            return (
+              <li className={cn('mb-1', variantStyles[variant])}>
+                {processedChildren}
+              </li>
+            );
+          }
         }}
       >
         {processedContent}
