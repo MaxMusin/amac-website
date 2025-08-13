@@ -96,9 +96,10 @@
       "email": "Adresse e-mail *",
       "phone": "Numéro de téléphone",
       "interest": {
-        "label": "Je suis intéressé par *",
+        "label": "Je suis *",
         "placeholder": "Sélectionnez une option",
-        "private": "Particulier"
+        "private": "Particulier",
+        "business": "Professionnel"
       },
       "experience": {
         "label": "Expérience de course",

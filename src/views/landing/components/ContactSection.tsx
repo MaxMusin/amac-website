@@ -237,6 +237,9 @@ function ContactForm() {
                     <SelectItem value="private">
                       {t('form.interest.private')}
                     </SelectItem>
+                    <SelectItem value="business">
+                      {t('form.interest.business')}
+                    </SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
