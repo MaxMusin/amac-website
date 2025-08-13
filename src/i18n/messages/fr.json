@@ -20,6 +20,25 @@
     "pitlane": "Pitlane",
     "simracingTeam": "Équipe Simracing"
   },
+  "steps": {
+    "title": "Notre démarche repose sur :",
+    "steps": [
+      {
+        "step": "Une écoute attentive de vos besoins"
+      },
+      {
+        "step": "Une approche innovante et contextuelle"
+      },
+      {
+        "step": "Une attention particulière aux ambiances, à la lumière et aux textures"
+      }
+    ]
+  },
+  "architecture": {
+    "badge": "Architecture",
+    "title": "Concevoir aujourd’hui les espaces durables et humains de demain",
+    "paragraph": "AMAC est un bureau d’architecture dédié à la création d’espaces durables, sensibles et sur mesure. De la première esquisse à la livraison du projet, nous accompagnons nos clients avec une approche fondée sur l’écoute, l’innovation et le respect du vivant.\n\nNotre architecture s’inscrit dans une logique de dialogue avec son environnement naturel et bâti. Chaque projet vise à répondre aux usages contemporains tout en intégrant des valeurs écologiques fortes : usage de matériaux biosourcés, mise en valeur des savoir-faire artisanaux locaux, optimisation de la performance énergétique et souci du détail.\n\nSpécialisé dans la rénovation, la réhabilitation de patrimoine et les constructions neuves respectueuses de leur contexte, AMAC s’engage activement dans l’amélioration des performances énergétiques des bâtiments. En tant que Responsable PEB agréé, nous vous accompagnons dans votre projet et veillons à la conformité énergétique tout au long du processus de conception.\n\nChez AMAC, nous croyons en une architecture porteuse de sens, capable de répondre aux enjeux climatiques et sociétaux tout en imaginant, avec vous, les espaces de vie de demain – durables, habitables et profondément humains."
+  },
   "pebManager": {
     "badge": "Responsable PEB",
     "title": "Votre allié pour une construction conforme et performante",
