@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/amac.agency"
-                className="text-muted-foreground hover:text-racing-red transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
