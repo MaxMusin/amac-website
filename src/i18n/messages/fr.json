@@ -5,10 +5,14 @@
   },
   "navbar": {
     "links": {
-      "events": "Trackdays",
-      "about": "À propos",
-      "teams": "Équipes",
-      "gallery": "Galerie"
+      "introduction": "Introduction",
+      "services": "Services",
+      "architecture": "Architecture",
+      "pebManager": "Responsable PEB",
+      "pebCertificate": "Certificat PEB",
+      "consulting": "Consulting achat/vente",
+      "about": "À propos de nous",
+      "contact": "Contact"
     },
     "cta": "Rejoignez-nous"
   },

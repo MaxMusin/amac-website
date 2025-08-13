@@ -34,7 +34,7 @@ const ContactSection = () => {
 
   return (
     <section
-      id="join"
+      id="contact"
       className="section-padding relative overflow-hidden bg-foreground"
     >
       <div className="container mx-auto relative z-10">

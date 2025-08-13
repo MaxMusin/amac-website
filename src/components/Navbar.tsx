@@ -94,29 +94,19 @@ const Header = () => {
               Menu
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <SheetHeader>
-              <SheetTitle className="text-left">Navigation</SheetTitle>
-            </SheetHeader>
+          <SheetContent side="right" className="w-[300px] sm:w-[500px]">
             <nav className="flex flex-col mt-6">
               {navLinks(t).map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-foreground/80 hover:text-foreground font-medium text-lg py-4 border-b border-border/50 transition-colors relative group"
+                  className="text-muted text-2xl py-4 transition-colors relative group"
                   onClick={(e) => handleNavClick(e, link.href)}
                 >
                   {link.name}
-                  <span className="absolute left-0 bottom-3 h-[2px] w-0 bg-racing-red transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute left-0 bottom-3 h-[2px] w-0 bg-background transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
-              <a
-                href="#join"
-                className="btn-primary mt-6"
-                onClick={(e) => handleNavClick(e, '#join')}
-              >
-                {t('cta')}
-              </a>
             </nav>
           </SheetContent>
         </Sheet>
