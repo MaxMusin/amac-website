@@ -1,9 +1,16 @@
 'use client';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { 
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import { usePathname } from '@/navigation';
 import { scrollToAnchor } from '@/utils';
 import { navLinks } from '@/utils/config';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -41,20 +48,25 @@ const Header = () => {
       window.location.href = `/${href}`;
     }
 
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-    }
+    // Close the sheet after navigation
+    setIsMenuOpen(false);
   };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isMenuOpen
-          ? 'bg-background/95 backdrop-blur-sm shadow-md py-3'
+          ? 'bg-foreground backdrop-blur-sm shadow-md py-3'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="container flex items-center justify-between">
+        {/* Left side - Language Switcher */}
+        <div className="flex items-center">
+          <LanguageSwitcher />
+        </div>
+
+        {/* Center - Logo */}
         <div className="flex items-center">
           <a
             href="#home"
@@ -62,8 +74,8 @@ const Header = () => {
             onClick={(e) => handleNavClick(e, '#home')}
           >
             <Image
-              src="/images/auriga_racing__logo.svg"
-              alt="Auriga Racing Logo"
+              src="/images/logo_amac_short.svg"
+              alt="AMAC Logo"
               fill
               priority
               className="object-contain"
@@ -71,69 +83,44 @@ const Header = () => {
           </a>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
-          {navLinks(t).map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-white/80 hover:text-white font-medium text-sm transition-colors relative group"
-              onClick={(e) => handleNavClick(e, link.href)}
+        {/* Right side - Menu Sheet */}
+        <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+          <SheetTrigger asChild>
+            <button
+              className="text-muted uppercase flex flex-row items-center gap-2"
+              aria-label="Toggle Menu"
             >
-              {link.name}
-              <span className="absolute left-0 bottom-[-4px] h-[2px] w-0 bg-racing-red transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          ))}
-          <a
-            href="#join"
-            className="btn-primary lg:mx-2"
-            onClick={(e) => handleNavClick(e, '#join')}
-          >
-            {t('cta')}
-          </a>
-          <div className="navbar-language-switcher">
-            <LanguageSwitcher />
-          </div>
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-white"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle Menu"
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 backdrop-blur-sm p-4 shadow-lg bg-background/95">
-          <nav className="flex flex-col space-y-4">
-            {navLinks(t).map((link) => (
+              <Menu size={24} />
+              Menu
+            </button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetHeader>
+              <SheetTitle className="text-left">Navigation</SheetTitle>
+            </SheetHeader>
+            <nav className="flex flex-col mt-6">
+              {navLinks(t).map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-foreground/80 hover:text-foreground font-medium text-lg py-4 border-b border-border/50 transition-colors relative group"
+                  onClick={(e) => handleNavClick(e, link.href)}
+                >
+                  {link.name}
+                  <span className="absolute left-0 bottom-3 h-[2px] w-0 bg-racing-red transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              ))}
               <a
-                key={link.name}
-                href={link.href}
-                className="text-white/80 hover:text-white font-medium text-lg py-2 transition-colors relative group"
-                onClick={(e) => handleNavClick(e, link.href)}
+                href="#join"
+                className="btn-primary mt-6"
+                onClick={(e) => handleNavClick(e, '#join')}
               >
-                {link.name}
-                <span className="absolute left-0 bottom-[-2px] h-[2px] w-0 bg-racing-red transition-all duration-300 group-hover:w-full"></span>
+                {t('cta')}
               </a>
-            ))}
-            <a
-              href="#join"
-              className="btn-primary lg:mx-2"
-              onClick={(e) => handleNavClick(e, '#join')}
-            >
-              {t('cta')}
-            </a>
-            <div className="py-2">
-              <LanguageSwitcher />
-            </div>
-          </nav>
-        </div>
-      )}
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
     </header>
   );
 };
