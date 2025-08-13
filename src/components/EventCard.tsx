@@ -36,7 +36,7 @@ export default function EventCard({
   const getFillColor = () => {
     if (!fillPercentage) return 'bg-racing-dark';
     if (fillPercentage >= 90) return 'bg-racing-darkred';
-    if (fillPercentage >= 70) return 'bg-racing-red';
+    if (fillPercentage >= 70) return 'bg-primary';
     return 'bg-racing-lightred';
   };
 
@@ -59,7 +59,7 @@ export default function EventCard({
         )}
         <div
           className={`absolute bottom-0 left-0 py-1 px-3 text-xs font-semibold ${
-            event.type === 'trackday' ? 'bg-racing-red' : 'bg-racing-black'
+            event.type === 'trackday' ? 'bg-primary' : 'bg-racing-black'
           } text-white z-20`}
         >
           {types[event.type as 'trackday' | 'simracing']}
@@ -73,7 +73,7 @@ export default function EventCard({
           )}
 
         {event.cancel && (
-          <div className="absolute top-0 right-0 py-1 px-3 text-xs font-bold bg-racing-red text-white rotate-0 m-2 rounded z-20">
+          <div className="absolute top-0 right-0 py-1 px-3 text-xs font-bold bg-primary text-white rotate-0 m-2 rounded z-20">
             <p className="uppercase">{t('event.canceled')}</p>
           </div>
         )}
@@ -81,7 +81,7 @@ export default function EventCard({
 
       <div className="p-4">
         {event.cancel && (
-          <div className="mb-4 p-2 bg-racing-red bg-opacity-10 rounded-md">
+          <div className="mb-4 p-2 bg-primary bg-opacity-10 rounded-md">
             <p className="text-sm text-white font-semibold flex items-center">
               <CircleX className="h-4 w-4 mr-2" />
               {t('event.canceledNotice')}

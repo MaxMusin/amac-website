@@ -3,8 +3,6 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { 
   Sheet,
   SheetContent,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { usePathname } from '@/navigation';

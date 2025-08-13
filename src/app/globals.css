@@ -211,8 +211,8 @@
     color: var(--primary-500);
   }
 
-  .bg-racing-red {
-    background-color: var(--racing-red);
+  .bg-primary {
+    background-color: var(--primary);
   }
 
   .bg-racing-lightred {
