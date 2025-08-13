@@ -28,6 +28,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { sendContactEmail } from '@/lib/actions';
 import { contactFormSchema } from '@/lib/schemas';
+import Image from 'next/image';
 
 const ContactSection = () => {
   const t = useTranslations('contact');
@@ -39,7 +40,8 @@ const ContactSection = () => {
     >
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
+          <div className="flex flex-col justify-between">
+            <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-muted">
               {t('title')}
             </h2>
@@ -54,7 +56,7 @@ const ContactSection = () => {
                   <Mail className="text-secondary mr-3 h-5 w-5" />
                   <a
                     href={`mailto:${t('contact.email')}`}
-                    className="text-secondary hover:text-white transition-colors"
+                    className="text-secondary hover:text-muted transition-colors"
                   >
                     {t('contact.email')}
                   </a>
@@ -63,13 +65,21 @@ const ContactSection = () => {
                   <Phone className="text-secondary mr-3 h-5 w-5" />
                   <a
                     href={`tel:${t('contact.phone')}`}
-                    className="text-secondary hover:text-white transition-colors"
+                    className="text-secondary hover:text-muted transition-colors"
                   >
                     {t('contact.phone')}
                   </a>
                 </div>
               </div>
             </div>
+            </div>
+            <Image
+              src="/images/contact.png"
+              alt="contact image"
+              width={1920}
+              height={1080}
+              className="w-full h-auto object-contain mt-8"
+            />
           </div>
 
           <div className="bg-background rounded-lg p-6 shadow-xl">
