@@ -12,34 +12,33 @@ export async function sendContactEmail(formData: z.infer<typeof emailFormSchema>
   try {
     const validatedFields = emailFormSchema.parse(formData);
     
-    const { firstName, lastName, email, phone, interest, experience, message } = validatedFields;
+    const { firstName, lastName, email, phone, interest, message } = validatedFields;
     
     if (!resendApiKey || resendApiKey === 'test_api_key') {
       console.log('Using test mode - would have sent:');
       console.log({
-        from: 'Auriga Racing <hello@aurigaracing.be>',
-        to: ['hello@aurigaracing.be'],
+        from: 'AMAC <hello@amac.agency>',
+        to: ['hello@amac.agency'],
         replyTo: email,
-        subject: `Auriga Racing - Form: ${interest || 'Event Booking'} | ${firstName} ${lastName}`,
-        message: `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nInterest: ${interest || 'Event Booking'}\nExperience: ${experience || 'Not provided'}\nMessage: ${message || 'No message provided'}`
+        subject: `AMAC - Form: ${interest || 'Contact'} | ${firstName} ${lastName}`,
+        message: `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nInterest: ${interest || 'Contact'}\nMessage: ${message || 'No message provided'}`
       });
       
       return { success: true, data: { id: 'test_email_id' } };
     }
     
     const { data, error } = await resend.emails.send({
-      from: 'Auriga Racing <hello@aurigaracing.be>',
-      to: ['hello@aurigaracing.be'],
+      from: 'AMAC <hello@amac.agency>',
+      to: ['hello@amac.agency'],
       replyTo: email,
-      subject: `Auriga Racing - Form: ${interest || 'Event Booking'} | ${firstName} ${lastName}`,
+      subject: `AMAC - Form: ${interest || 'Contact'} | ${firstName} ${lastName}`,
       html: `
-        <h2>Auriga Racing</h2>
+        <h2>AMAC</h2>
         <p><strong>First Name:</strong> ${firstName}</p>
         <p><strong>Last Name:</strong> ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-        <p><strong>Interest:</strong> ${interest || 'Event Booking'}</p>
-        <p><strong>Experience:</strong> ${experience || 'Not provided'}</p>
+        <p><strong>Interest:</strong> ${interest || 'Contact'}</p>
         <p><strong>Message:</strong> ${message || 'No message provided'}</p>
       `,
     });
