@@ -20,6 +20,16 @@
     "pitlane": "Pitlane",
     "simracingTeam": "Équipe Simracing"
   },
+  "introduction": {
+    "badge": "Introduction",
+    "title": "Agence dans le domaine de l'architecture",
+    "paragraph": "AMAC est un bureau d’architecture dédié à la création d’espaces durables, sensibles et sur mesure. De l’esquisse à la réalisation, nous vous accompagnons avec une approche qui allie écoute, innovation et respect du vivant.\n\nNotre architecture est pensée pour s’ancrer harmonieusement dans son environnement, répondre aux usages contemporains et valoriser les matériaux et savoir-faire locaux.\n\nNous sommes également spécialisés dans la PEB et l’accompagnement (conseil architectural) dans l’achat ou la vente d’un bien."
+  },
+  "services": {
+    "badge": "Services",
+    "title": "Nous fournissons divers services pour transformer vos idées",
+    "paragraph": "dd"
+  },
   "steps": {
     "title": "Notre démarche repose sur :",
     "steps": [
