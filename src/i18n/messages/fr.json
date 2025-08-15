@@ -32,7 +32,14 @@
   "services": {
     "badge": "Services",
     "title": "Nous fournissons divers services pour transformer vos idées",
-    "paragraph": "dd"
+    "services": [
+      {"service": "Aménagement intérieur"},
+      {"service": "Transformation, extension, rénovation"},
+      {"service": "Permis de régularisation / urbanisme"},
+      {"service": "Responsable PEB (travaux nécessitant permis)"},
+      {"service": "Certificat PEB (bâtiment existant)"},
+      {"service": "Consulting (estimatif travaux achat/vente ; plans de projet d’investissement pour vendre)"}
+    ]
   },
   "steps": {
     "title": "Notre démarche repose sur :",
