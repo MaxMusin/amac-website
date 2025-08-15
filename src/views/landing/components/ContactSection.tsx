@@ -139,7 +139,7 @@ function ContactForm() {
           title: t('form.error'),
           variant: 'destructive',
         });
-        console.error('Form submission error:', result.error);
+        console.error('Form submission error:', 'error' in result ? result.error : 'Unknown error');
       }
     } catch (error) {
       toast({
