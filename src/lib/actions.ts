@@ -2,15 +2,15 @@
 
 import { Resend } from 'resend';
 import { z } from 'zod';
-import { emailFormSchema } from './schemas';
+import { contactFormSchema } from './schemas';
 
 // Initialize Resend with a fallback for development
 const resendApiKey = process.env.RESEND_API_KEY || 'test_api_key';
 const resend = new Resend(resendApiKey);
 
-export async function sendContactEmail(formData: z.infer<typeof emailFormSchema>) {
+export async function sendContactEmail(formData: z.infer<typeof contactFormSchema>) {
   try {
-    const validatedFields = emailFormSchema.parse(formData);
+    const validatedFields = contactFormSchema.parse(formData);
     
     const { firstName, lastName, email, phone, interest, message } = validatedFields;
     
@@ -24,7 +24,8 @@ export async function sendContactEmail(formData: z.infer<typeof emailFormSchema>
         message: `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\nInterest: ${interest || 'Contact'}\nMessage: ${message || 'No message provided'}`
       });
       
-      return { success: true, data: { id: 'test_email_id' } };
+      const result = { success: true, data: { id: 'test_email_id' } };
+      return result;
     }
     
     const { data, error } = await resend.emails.send({
@@ -44,15 +45,14 @@ export async function sendContactEmail(formData: z.infer<typeof emailFormSchema>
     });
 
     if (error) {
-      return { success: false, error: error.message };
+      const errorMessage = error.message || (error as { error?: string }).error || 'Email service error occurred';
+      return { success: false, error: errorMessage };
     }
-    
     return { success: true, data };
   } catch (error) {
     if (error instanceof z.ZodError) {
       return { success: false, error: error.errors };
     }
-    
     return { success: false, error: 'Something went wrong. Please try again.' };
   }
 }

@@ -101,14 +101,6 @@
         "private": "Particulier",
         "business": "Professionnel"
       },
-      "experience": {
-        "label": "Expérience de course",
-        "placeholder": "Sélectionnez une option",
-        "none": "Aucune",
-        "beginner": "Débutant (0-3 ans)",
-        "intermediate": "Intermédiaire (3-5 ans)",
-        "experienced": "Expérimenté (5+ ans)"
-      },
       "message": {
         "label": "Message",
         "placeholder": "Partagez votre expérience de course, vos accomplissements ou pourquoi vous voulez nous contacter..."
